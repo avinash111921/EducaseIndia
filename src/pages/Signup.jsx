@@ -69,6 +69,8 @@ const Signup = () => {
     if (!isFormValid) return;
 
     console.log("Form submitted:", formData);
+    // Store user in localStorage
+    localStorage.setItem('user', JSON.stringify(formData));
     navigate("/profile");
   };
 
